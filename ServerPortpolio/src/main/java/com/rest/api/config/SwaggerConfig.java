@@ -18,7 +18,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket swaggerApi() {
 		return new Docket(DocumentationType.SWAGGER_2).apiInfo(swaggerInfo()).select()
-				.apis(RequestHandlerSelectors.basePackage("com.rest.api.contorller"))
+				.apis(RequestHandlerSelectors.basePackage("com.rest.api.controller"))
 				.paths(PathSelectors.ant("/v1/**"))
 				.build()
 				.useDefaultResponseMessages(false);
@@ -27,7 +27,7 @@ public class SwaggerConfig {
 	private ApiInfo swaggerInfo() {
 		return new ApiInfoBuilder().title("API Documentation")
 				.description("REST API Documentation")
-				.license("Apache2")
+				.license("Apache 2.0")
 				.licenseUrl("http://localhost")
 				.version("1")
 				.build();

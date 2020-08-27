@@ -1,9 +1,11 @@
 package com.rest.api.controller.exception;
 
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rest.api.advice.exception.AuthEntryPointException;
 import com.rest.api.model.response.CommonResult;
 
 import lombok.RequiredArgsConstructor;
@@ -15,7 +17,7 @@ public class ExceptionController {
 	
 	@GetMapping(value = "/entrypoint")
 	public CommonResult entrypointException() {
-		throw new 
+		throw new AuthEntryPointException();
 	}
 	
 	@GetMapping(value = "accessdenied")

@@ -1,0 +1,16 @@
+# =====================
+# application.yml
+# =====================
+
+server:
+  port: 8080
+  
+spring:
+   profiles:
+      active: local
+   messages:
+      basename: i18n/exception
+      encoding: UTF-8
+   
+   jwt:
+   secret: A!@$&vasT28J)
