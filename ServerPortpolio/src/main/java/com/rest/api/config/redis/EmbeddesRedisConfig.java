@@ -1,4 +1,4 @@
-package com.rest.api.config;
+package com.rest.api.config.redis;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

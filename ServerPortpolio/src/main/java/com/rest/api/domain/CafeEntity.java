@@ -26,11 +26,14 @@ public class CafeEntity extends TimeEntity{
 	@Column(length = 100, nullable = false)
 	private String name;
 	
+	private String lopnSfTeamCode;
 	
-	private String addressOld;
+	private String mgtNo;
 	
-	private String addressNew;
+	private String siteWhlAddr;
 	
-	private String tel;
+	private String rdnWhlAddr;
+	
+	private String siteTel;
 	
 }

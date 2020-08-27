@@ -1,4 +1,4 @@
-package com.rest.api.config;
+package com.rest.api.config.redis;
 
 import java.time.Duration;
 import java.util.HashMap;

@@ -28,7 +28,7 @@ public class SwaggerConfig {
 		return new ApiInfoBuilder().title("API Documentation")
 				.description("REST API Documentation")
 				.license("Apache 2.0")
-				.licenseUrl("http://localhost")
+				.licenseUrl("http://lsh")
 				.version("1")
 				.build();
 	}

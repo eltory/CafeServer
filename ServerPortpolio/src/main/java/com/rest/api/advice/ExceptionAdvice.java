@@ -50,7 +50,6 @@ public class ExceptionAdvice {
     public CommonResult resourceNotExistException(HttpServletRequest request, ResourceNotExistException e) {
         return responseService.getFailResult(Integer.valueOf(getMessage("resourceNotExist.code")), getMessage("resourceNotExist.msg"));
     }
-
     
 	private String getMessage(String code) {
 		return getMessage(code);

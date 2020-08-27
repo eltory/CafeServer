@@ -31,7 +31,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.and()
 		.authorizeRequests()	// next request
 		.antMatchers("/*/signin", "/*/signup").permitAll()	// register, sign in for anyone
-		.antMatchers(HttpMethod.GET, "hello/**").permitAll()
 		.anyRequest().permitAll();
 	}
 	

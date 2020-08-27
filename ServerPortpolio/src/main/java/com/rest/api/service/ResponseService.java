@@ -17,11 +17,11 @@ public class ResponseService {
 	@Getter
 	@AllArgsConstructor
 	public enum CommonResponse{
-		SUCCESS(0, "success!"),
-		FAIL(-1,"fail");
+		SUCCESS(0, "success"),
+		FAIL(-1, "fail");
 		
-		int code;
-		String msg;
+		private int code;
+		private String msg;
 	}
 	
 	public <T> SingleResult<T> getSingleResult(T data){

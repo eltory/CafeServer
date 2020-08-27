@@ -9,5 +9,4 @@ public class ServerPortpolioApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ServerPortpolioApplication.class, args);
 	}
-
 }
