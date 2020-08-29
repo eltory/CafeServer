@@ -10,8 +10,8 @@ import kr.go.localdata.client.ReceiveLocalDatas;
 public class UpdateScheduler {
 
 	
-	@Scheduled(cron = "${spring.interval}")
-	public void getNewData() {
-		ReceiveLocalDatas receiveLocalDatas = new ReceiveLocalDatas();
-	}
+//	@Scheduled(cron = "${spring.interval}")
+//	public void getNewData() {
+//		ReceiveLocalDatas receiveLocalDatas = new ReceiveLocalDatas();
+//	}
 }
