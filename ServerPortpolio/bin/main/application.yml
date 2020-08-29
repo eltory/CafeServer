@@ -14,3 +14,5 @@ spring:
    
    jwt:
    secret: A!@$&vasT28J)
+   
+   interval: 0 0 0 0 * * *

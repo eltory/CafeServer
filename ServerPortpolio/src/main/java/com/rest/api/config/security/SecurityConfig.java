@@ -1,7 +1,6 @@
 package com.rest.api.config.security;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -25,30 +24,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-		.httpBasic().disable()	// rest api
-		.csrf().disable()		// rest api
-		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)	// jwt token base
+		.httpBasic().disable()
+		.csrf().disable()
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and()
-		.authorizeRequests()	// next request
-		.antMatchers("/*/signin", "/*/signup").permitAll()	// register, sign in for anyone
+		.authorizeRequests()
+		.antMatchers("/*/signin", "/*/signup").permitAll()	// 추후 사용자 계정 추가시 사용하기 
 		.anyRequest().permitAll();
 	}
-	
-//	@Override
-//	protected void cofigure(HttpSecurity http) throws Exception{
-//		http
-//		.httpBasic().disable()
-//		.csrf().disable()
-//		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//		.and()
-//		.authorizeRequests()
-//		.antMatchers("/*/signin", "/*/signin/**", "/*/signup", "/*/signup/**", "/social/**").permitAll() 
-//        .antMatchers(HttpMethod.GET, "/exception/**", "/helloworld/**","/actuator/health", "/v1/board/**", "/favicon.ico").permitAll(); 
-//        .and()
-//        .exceptionHandling().accessDeniedHandler(new CustomAccessDeniedHandler())
-//        .and()
-//        .exceptionHandling().authenticationEntryPoint(new CustomAuthenticationEntryPoint())
-//        .and()
-//        .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
-//	}
 }

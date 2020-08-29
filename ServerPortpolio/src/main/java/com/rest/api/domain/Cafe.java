@@ -1,18 +1,24 @@
 package com.rest.api.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Builder
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class CafeEntity extends TimeEntity{
+public class Cafe extends BaseTime implements Serializable{
 	
 	/**
 	 * 
@@ -26,14 +32,17 @@ public class CafeEntity extends TimeEntity{
 	@Column(length = 100, nullable = false)
 	private String name;
 	
-	private String lopnSfTeamCode;
+	private String localCode;
 	
-	private String mgtNo;
+	private String manageNo;
 	
-	private String siteWhlAddr;
+	private String siteAddress;
 	
-	private String rdnWhlAddr;
+	private String roadAddress;
 	
-	private String siteTel;
+	private String tel;
 	
+	private String x;
+	
+	private String y;
 }

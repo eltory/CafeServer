@@ -18,8 +18,8 @@ public class CafeControllerTest {
 	@Autowired
 	private MockMvc mockMvc;
 	
-	@Test
-	public void search() throws Exception{
-		
-	}
+//	@Test
+//	public void search() throws Exception{
+//		
+//	}
 }

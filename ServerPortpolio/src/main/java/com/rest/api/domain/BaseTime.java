@@ -15,7 +15,7 @@ import lombok.Getter;
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class TimeEntity implements Serializable{
+public abstract class BaseTime implements Serializable{
 	
 	/**
 	 * 
